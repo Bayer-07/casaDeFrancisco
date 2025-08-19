@@ -17,14 +17,13 @@ O objetivo deste projeto é aplicar conceitos de **desenvolvimento web** e criar
 ```
 /projeto-site
 │
-├── index.html         # Página principal
+├── home.html         # Página principal
 ├── /css
 │   └── style.css      # CSS do site
 ├── /js
 │   └── script.js      # Scripts JavaScript do site
 └── /assets
     ├── /img           # Imagens do site
-    └── /fonts         # Fontes usadas no site
 ```
 ## 🚀 Como Executar
 1. Clone este repositório: `git clone https://github.com/Bayer-07/casaDeFrancisco.git`
@@ -49,9 +48,9 @@ Este projeto foi desenvolvido para aplicar conhecimentos adquiridos na disciplin
 ## 👩‍💻 Autores
 - [Gabriel Bayer](https://github.com/Bayer-07) 
 - [João Francisco Marca](https://github.com/joaomarca)
-- [Krysthian Yuri Bär]()
-- [Rafael Vinícius Hoffmann]()
-- [Mickael Bernardino]()
+- [Krysthian Yuri Bär](https://github.com/Krymus22)
+- [Rafael Vinícius Hoffmann](https://github.com/Rafael790)
+- [Mickael Bernardino](https://github.com/MickaelBernardino)
 
 ## 📜 Licença
 Este projeto foi desenvolvido para fins acadêmicos e não possui fins comerciais.
