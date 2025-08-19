@@ -9,7 +9,8 @@
 }
 
 .navbar-logo img {
-	height: 48px;
+	height: 75px;
+	border-radius: 50%;
 	width: auto;
 	display: block;
 }
