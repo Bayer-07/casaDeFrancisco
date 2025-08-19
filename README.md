@@ -23,7 +23,7 @@ O objetivo deste projeto é aplicar conceitos de **desenvolvimento web** e criar
 ├── /js
 │   └── script.js      # Scripts JavaScript do site
 └── /assets
-    ├── /img           # Imagens do site
+    └── /img           # Imagens do site
 ```
 ## 🚀 Como Executar
 1. Clone este repositório: `git clone https://github.com/Bayer-07/casaDeFrancisco.git`
