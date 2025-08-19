@@ -1,11 +1,11 @@
-/* Barra de navegação */
+/* * Barra de navegação * */
 .navbar {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	background: #fff;
 	padding: 12px 32px;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .navbar-logo img {
@@ -13,6 +13,22 @@
 	border-radius: 50%;
 	width: auto;
 	display: block;
+}
+
+.navbar-title {
+	display: flex;
+
+}
+
+.navbar-title h1 {
+	text-decoration: none;
+	color: #222;
+	font-family: 'Nunito', Arial, sans-serif;
+	font-weight: 600;
+}
+
+.navbar-menu {
+	display: flex;
 }
 
 .navbar-menu ul {
