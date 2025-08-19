@@ -30,7 +30,7 @@ O objetivo deste projeto é aplicar conceitos de **desenvolvimento web** e criar
 1. Clone este repositório: `git clone https://github.com/Bayer-07/casaDeFrancisco.git`
 2. Navegue até a pasta do projeto:
    `cd casaDeFrancisco`
-3. Abra o arquivo `index.html` em seu navegador.
+3. Abra o arquivo `home.html` em seu navegador.
 
 ## 📝 Funcionalidades
 - Layout responsivo para desktop e mobile.
