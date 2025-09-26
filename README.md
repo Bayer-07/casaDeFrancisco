@@ -1,10 +1,10 @@
 # 🏫 Projeto de Website - Casa de Francisco de Assis
 
 Este é um projeto de website desenvolvido como parte da disciplina de **Projeto Integrador de Extensão I** do curso de **Engenharia de Software** na **Faculdade Donaduzzi**.  
-O objetivo deste projeto é aplicar conceitos de **desenvolvimento web** e criar um site funcional e responsivo.
+O objetivo deste projeto é aplicar conceitos de **desenvolvimento web** e criar um site funcional, dinâmico e responsivo.
 
 ## 🎯 Objetivo
-- Criar um website interativo que atenda aos requisitos do cliente.
+- Criar um website interativo e dinâmico que atenda aos requisitos do cliente.
 - Praticar o uso de HTML, CSS e JavaScript.
 - Desenvolver um layout responsivo e acessível.
 
@@ -17,13 +17,20 @@ O objetivo deste projeto é aplicar conceitos de **desenvolvimento web** e criar
 ```
 /projeto-site
 │
-├── home.html         # Página principal
+├── home.html          # Página principal
+│
+├── index.html         # Página de deploy do github-pages
+│
 ├── /css
 │   └── style.css      # CSS do site
+│
 ├── /js
 │   └── script.js      # Scripts JavaScript do site
-└── /assets
-    └── /img           # Imagens do site
+│
+├── /assets
+│   └── /images        # Imagens do site    
+│
+└── /pages             # Páginas do site
 ```
 ## 🚀 Como Executar
 1. Clone este repositório: `git clone https://github.com/Bayer-07/casaDeFrancisco.git`
@@ -38,10 +45,10 @@ O objetivo deste projeto é aplicar conceitos de **desenvolvimento web** e criar
 - Conteúdos organizados por seções.
 
 ## 🧾 Justificativa do Projeto
-Este projeto foi desenvolvido para aplicar conhecimentos adquiridos na disciplina, demonstrando habilidades em **HTML, CSS e JavaScript** e a capacidade de criar um site funcional e responsivo. Ele também permite explorar boas práticas de estruturação de código e organização de conteúdo web.
+Este projeto foi desenvolvido para aplicar conhecimentos adquiridos nas disciplinas, demonstrando habilidades em **HTML, CSS e JavaScript** e a capacidade de criar um site funcional, dinâmico e responsivo. Ele também permite explorar boas práticas de estruturação de código e organização de conteúdo web.
 
 ## 🎯 Resultados Esperados
-- Criação de um site funcional que possa ser visualizado em diferentes dispositivos e atenda os requisitos do cliente.
+- Criação de um site funcional e dinâmico que possa ser visualizado em diferentes dispositivos e atenda os requisitos do cliente.
 - Compreensão prática de conceitos teóricos estudados em aula.
 - Desenvolvimento de habilidades em programação web e design responsivo.
 
