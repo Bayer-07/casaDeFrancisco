@@ -1,0 +1,23 @@
+title: Casa de Francisco
+description: Website for Casa de Francisco
+theme: jekyll-theme-primer
+
+# Configurações de build
+source: .
+destination: ./_site
+future: false
+
+# Plugins
+plugins:
+  - jekyll-github-metadata
+  - jekyll-seo-tag
+  - jekyll-relative-links
+
+# Configurações adicionais
+relative_links:
+  enabled: true
+  collections: false
+
+# Remover README do índice
+readme_index:
+  enabled: false
