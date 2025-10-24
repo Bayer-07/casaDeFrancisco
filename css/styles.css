@@ -1,3 +1,13 @@
+:root {
+	font-family: Inter, sans-serif;
+	font-feature-settings: 'liga' 1, 'calt' 1;
+	--marrom: #574E45;
+	--bege-dourado: #B5965A;
+	--branco-suave: #F8F4E6;
+	--preto: #000;
+	--cinza-claro: #373737a6;
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -7,20 +17,26 @@ body {
 	background-color: #F8F4E6;
 }
 
-/* * Barra de navegação * */
+/** Barra de navegação */
+
 .navbar-wrapper {
 	position: fixed;
 	top: 0;
 	width: 100vw;
+	display: flex;
+	justify-content: center;
+	background: var(--branco-suave);
+	box-shadow: 0px 1px 10px var(--preto);
 }
 
 .navbar {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background: #F8F4E6;
 	padding: 12px 32px;
-	margin: 0rem 10rem 0rem 10rem;
+	width: 80%;
+	color: var(--preto);
+	font-weight: 900;
 }
 
 .navbar-title img {
@@ -33,13 +49,11 @@ body {
 .navbar-title {
 	display: flex;
 	gap: 1rem;
+	align-items: center;
 }
 
-.navbar-title h1 {
-	text-decoration: none;
-	color: #222;
-	font-family: 'Nunito', Arial, sans-serif;
-	font-weight: 600;
+.navbar-title div h4 {
+	font-weight: 700;
 }
 
 .navbar-menu {
@@ -56,25 +70,23 @@ body {
 
 .navbar-menu a {
 	text-decoration: none;
-	color: #222;
-	font-family: 'Nunito', Arial, sans-serif;
 	font-size: 1.1rem;
-	font-weight: 600;
 	transition: color 0.2s;
+	color: var(--preto);
 }
 
 .navbar-menu a:hover {
-	color: #00796b;
+	color: var(--cinza-claro);
 }
 
-/* Controle da Main */
 
+/** Controle da Main */
 
 main {
 	width: 100vw;
 	margin-top: 15rem;
 	display: flex;
-	flex-direction: column;	
+	flex-direction: column;
 	align-items: center;
 }
 
@@ -83,6 +95,24 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 2rem;
+}
+
+.inicio p {
+	color: var(--cinza-claro);
+	width: 55%;
+	line-height: 1.4rem;
+	text-align: center;
+}
+
+.primeiro {
+	font-weight: 900;
+	color: var(--marrom);
+}
+
+.segundo {
+	font-weight: 700;
+	color: var(--bege-dourado);
 }
 
 .logo-principal {
@@ -93,4 +123,13 @@ main {
 
 main section {
 	text-align: center;
+}
+
+
+/** Responsividade */
+
+@media screen and (max-width: 1380px) {
+	.navbar-menu {
+		display: none;
+	}
 }
