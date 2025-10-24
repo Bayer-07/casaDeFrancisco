@@ -142,7 +142,7 @@ body {
 	align-items: center;
 	border-radius: 0.5rem;
 	height: 2.5rem;
-	columns: var(--preto);
+	color: var(--preto);
 	transition: border-color 0.3s ease;
 	border: 1px solid transparent;
 	box-sizing: border-box;
@@ -162,7 +162,7 @@ body {
 	align-items: center;
 	border-radius: 0.5rem;
 	height: 2.5rem;
-	columns: var(--preto);
+	color: var(--preto);
 	transition: border-color 0.3s ease;
 	border: 1px solid transparent;
 	box-sizing: border-box;
