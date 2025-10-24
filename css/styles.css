@@ -1,15 +1,30 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #F8F4E6;
+}
+
 /* * Barra de navegação * */
+.navbar-wrapper {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+}
+
 .navbar {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background: #fff;
+	background: #F8F4E6;
 	padding: 12px 32px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	margin: 0rem 10rem 0rem 10rem;
 }
 
-.navbar-logo img {
-	height: 75px;
+.navbar-title img {
+	height: 5rem;
 	border-radius: 50%;
 	width: auto;
 	display: block;
@@ -17,7 +32,7 @@
 
 .navbar-title {
 	display: flex;
-
+	gap: 1rem;
 }
 
 .navbar-title h1 {
@@ -50,4 +65,32 @@
 
 .navbar-menu a:hover {
 	color: #00796b;
+}
+
+/* Controle da Main */
+
+
+main {
+	width: 100vw;
+	margin-top: 15rem;
+	display: flex;
+	flex-direction: column;	
+	align-items: center;
+}
+
+.inicio {
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.logo-principal {
+	height: 15rem;
+	border-radius: 50%;
+	width: 15rem;
+}
+
+main section {
+	text-align: center;
 }
