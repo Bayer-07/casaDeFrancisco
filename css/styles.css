@@ -14,7 +14,7 @@
 }
 
 body {
-	background-color: #F8F4E6;
+	/* background-color: var(--branco-suave); */
 }
 
 /** Barra de navegação */
@@ -26,7 +26,7 @@ body {
 	display: flex;
 	justify-content: center;
 	background: var(--branco-suave);
-	box-shadow: 0px 1px 10px var(--preto);
+	box-shadow: 0px 1px 10px var(--cinza-claro);
 }
 
 .navbar {
@@ -82,12 +82,14 @@ body {
 
 /** Controle da Main */
 
-main {
+.main {
 	width: 100vw;
-	margin-top: 15rem;
+	padding-top: 10rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: var(--branco-suave);
+	box-shadow: 0px 4px 10px var(--cinza-claro);
 }
 
 .inicio {
@@ -121,8 +123,56 @@ main {
 	width: 15rem;
 }
 
-main section {
+.main section {
 	text-align: center;
+}
+
+
+.btns {
+	padding: 2rem 0rem 5rem 0rem;
+	display: flex;
+	gap: 2rem;
+}
+
+.btn-projetos {
+	width: 15rem;
+	background-image: linear-gradient(10deg, #ffff8649, #ffff4d7c 90%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.5rem;
+	height: 2.5rem;
+	columns: var(--preto);
+	transition: border-color 0.3s ease;
+	border: 1px solid transparent;
+	box-sizing: border-box;
+	box-shadow: -3px 3px 1px var(--cinza-claro);
+}
+
+.btn-projetos:hover {
+	border-color: var(--cinza-claro);
+	cursor: pointer;
+}
+
+.btn-eventos {
+	width: 10rem;
+	background-color: var(--bege-dourado);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.5rem;
+	height: 2.5rem;
+	columns: var(--preto);
+	transition: border-color 0.3s ease;
+	border: 1px solid transparent;
+	box-sizing: border-box;
+	color: #FFFF9C;
+	box-shadow: -3px 3px 1px var(--cinza-claro);
+}
+
+.btn-eventos:hover {
+	border-color: var(--cinza-claro);
+	cursor: pointer;
 }
 
 
