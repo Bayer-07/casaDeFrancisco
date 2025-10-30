@@ -20,27 +20,28 @@ async function getDados() {
             }
         );
 
-        const dado = await informacaoEventosPrincipais.json();
+        const dadoNaoFOrmatado = await informacaoEventosPrincipais.json();
+        const dado = dadoNaoFOrmatado.result
         console.log(dado)
 
         const wrapper = document.querySelector("[class = 'eventos']");
 
-        for (let index = 0; index < dado.result.length; index++) {
+        for (let index = 0; index < dado.length; index++) {
 
             let divCartaoEventos = document.createElement('div')
             divCartaoEventos.classList.add('cartao')
             wrapper.appendChild(divCartaoEventos)
 
             let h3CartaoEventos = document.createElement('h3')
-            h3CartaoEventos.innerText = dado.result[index].nome
+            h3CartaoEventos.innerText = dado[index].nome
             divCartaoEventos.appendChild(h3CartaoEventos)
 
             let pCartaoEventos = document.createElement('p')
-            pCartaoEventos.innerText = dado.result[index].descricao
+            pCartaoEventos.innerText = dado[index].descricao
             divCartaoEventos.appendChild(pCartaoEventos)
 
             // Data e Hora
-            const dataHora = new Date(dado.result[index].dataEHora);
+            const dataHora = new Date(dado[index].dataEHora);
             const dataFormatada = dataHora.toLocaleDateString('pt-BR');
             const horaFormatada = dataHora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
 
@@ -67,7 +68,7 @@ async function getDados() {
             divInfoLocal.classList.add('info');
             divInfoLocal.innerHTML = `
                 <span class="material-symbols-outlined">location_on</span>
-                <span>${dado.result[index].local}</span>
+                <span>${dado[index].local}</span>
             `;
             divCartaoEventos.appendChild(divInfoLocal);
         }
