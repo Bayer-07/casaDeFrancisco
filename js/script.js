@@ -14,7 +14,7 @@ function navegarEventos() {
 async function getDados() {
     try {
         const informacaoEventosPrincipais = await fetch(
-            "https:lycs5ydc.api.sanity.io/v2025-10-30/data/query/production?query=*%0A%5B%0A++_type+%3D%3D+%27eventos_principais%27%0A%5D%0A%7B%0A++dataEHora%2C%0A++local%2C%0A++descricao%2C%0A++nome%0A%7D&perspective=drafts",
+            "https://lycs5ydc.api.sanity.io/v2025-10-30/data/query/production?query=*%0A%5B%0A++_type+%3D%3D+%27eventos_principais%27%0A%5D%0A%7B%0A++dataEHora%2C%0A++local%2C%0A++descricao%2C%0A++nome%0A%7D&perspective=drafts",
             {
                 method: "GET",
             }
