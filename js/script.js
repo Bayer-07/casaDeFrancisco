@@ -78,3 +78,19 @@ async function getDados() {
     }
 }
 getDados()
+
+
+const box = document.querySelector('.organizacao');
+const text = box.querySelector('.texto');
+
+function resizeText() {
+  const scale = Math.min(
+    box.clientWidth / text.scrollWidth,
+    box.clientHeight / text.scrollHeight,
+    1 // prevents enlarging
+  );
+  text.style.transform = `scale(${scale})`;
+}
+
+window.addEventListener('resize', resizeText);
+resizeText();
