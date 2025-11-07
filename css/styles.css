@@ -170,12 +170,10 @@ body {
 	color: #574e45;
 	padding:40px;
 	width: 50%;
-	height: 530px;
 	margin: 0 0 0 100px;
 	border-radius: 15px;
 	box-shadow: -10px 10px #e7ddc4;
 	
-	overflow: hidden;
 	box-sizing: border-box;
 }
 
