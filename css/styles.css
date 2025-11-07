@@ -23,6 +23,7 @@ body {
 	position: fixed;
 	top: 0;
 	width: 100vw;
+	z-index: 9999;
 	display: flex;
 	justify-content: center;
 	background: var(--branco-suave);
@@ -157,21 +158,30 @@ body {
 }
 
 .organizacao {
-	display: flexbox;
-	font-size: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	font-size:25px;
 	font-weight: 600;
 	background-color: var(--branco-suave);
 	color: #574e45;
-	padding: 40px;
+	padding:40px;
 	width: 50%;
-	height: 530px;
 	margin: 0 0 0 100px;
 	border-radius: 15px;
 	box-shadow: -10px 10px #e7ddc4;
+	
+	box-sizing: border-box;
 }
 
-.organizacao p {
-	margin: 40px 40px 10px;
+.organizacao p{
+	display: inline-block;
+	transform-origin: center;
+	transition: transform 0.2 ease;
+	margin: 20px 0;
+	text-align: justify;
 }
 
 .eventos-section {
