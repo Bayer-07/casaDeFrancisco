@@ -6,11 +6,6 @@ function navegarEventos() {
     console.log("Apertou o botão 'Eventos'")
 }
 
-
-
-
-
-
 async function getDados() {
     try {
         const informacaoEventosPrincipais = await fetch(
@@ -78,4 +73,3 @@ async function getDados() {
     }
 }
 getDados()
-
