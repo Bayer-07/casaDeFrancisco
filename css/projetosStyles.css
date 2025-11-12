@@ -1,0 +1,7 @@
+/** Controle da Main */
+.main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 10rem 5rem 5rem 5rem;
+}
