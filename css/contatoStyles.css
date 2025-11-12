@@ -13,12 +13,7 @@
   --azul-facebook: #1877F2;
 }
 
-body {
-  background-color: var(--bege-dourado);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+
 
 .main-content {
   flex: 1;
@@ -26,6 +21,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  justify-content: center;
 }
 
 .page-title {
