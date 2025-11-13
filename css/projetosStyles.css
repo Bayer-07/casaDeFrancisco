@@ -56,9 +56,11 @@
     flex-direction: column;
     width: 50%;
 }
+.texto-card h1 {
+    margin-bottom: 20px;
+}
 
 .info {
-    align-items: center;
     display: flex;
     gap: 0.5rem;
 }

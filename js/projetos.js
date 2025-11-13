@@ -45,6 +45,11 @@ function inicializarCarrossel(cardElement) {
     goToSlide(0);
 }
 
+
+
+
+
+
 async function getDados() {
     try {
         // Unifiquei as chamadas da API para simplificar
@@ -55,6 +60,7 @@ async function getDados() {
 
         const dadosJSON = await response.json();
         const dados = dadosJSON.result;
+        console.log(dados)
 
         if (!dados || dados.length === 0) {
             console.log("Nenhum dado encontrado.");
@@ -78,10 +84,10 @@ async function getDados() {
 
             divInfoCard.innerHTML = `
                 <h1>${item.nome}</h1>
-                <div class="info"><span class="material-symbols-outlined">calendar_today</span><span>${dataFormatada}</span></div>
-                <div class="info"><span class="material-symbols-outlined">nest_clock_farsight_analog</span><span>${horaFormatada}</span></div>
-                <div class="info"><span class="material-symbols-outlined">location_on</span><span>${item.local}</span></div>
-                <div class="info"><span class="material-symbols-outlined">error</span><span>${item.descricao}</span></div>
+                <div class="info"><span class="material-symbols-outlined" style="user-select:none;">calendar_today</span><span>${dataFormatada}</span></div>
+                <div class="info"><span class="material-symbols-outlined" style="user-select:none;">nest_clock_farsight_analog</span><span>${horaFormatada}</span></div>
+                <div class="info"><span class="material-symbols-outlined" style="user-select:none;">location_on</span><span>${item.local}</span></div>
+                <div class="info"><span class="material-symbols-outlined" style="user-select:none;">error</span><span>${item.descricao}</span></div>
             `;
 
             // Cria o carrossel
