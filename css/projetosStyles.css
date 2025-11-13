@@ -1,7 +1,57 @@
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    --marrom: #574E45;
+    --bege-dourado: #B5965A;
+    --branco-suave: #F8F4E6;
+    --preto: #000;
+    --cinza-claro: #373737a6;
+    --marrom-rodape: #4C453D;
+    --marrom-botao: #36302B;
+    --bege-dourado: #A88B59;
+    --bege-campo: #F2E6CF;
+    --branco: #FFFFFF;
+    --cinza-placeholder: #888;
+    --azul-facebook: #1877F2;
+    --teste: #F6E9BA;
+}
+
+
+
+
+
 /** Controle da Main */
 .main {
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 10rem 5rem 5rem 5rem;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.card-projeto {
+    background-color: var(--bege-campo);
+    border-radius: 5px;
+    width: 80%;
+    min-height: 25rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.texto-card {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.info {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
 }

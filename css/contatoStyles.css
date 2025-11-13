@@ -26,35 +26,7 @@
   justify-content: center;
 }
 
-.page-title {
-  text-align: center;
-  margin-bottom: 3rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.title-wrapper {
-  display: inline-block;
-}
-
-.page-title h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--branco-suave);
-  margin-bottom: 1rem;
-  white-space: nowrap;
-}
-
-.title-line {
-  width: 110%;
-  height: 2px;
-  background-color: var(--branco-suave);
-  margin-top: 0.5rem;
-  margin-left: -5%;
-  margin-right: auto;
-}
 
 .contact-form-container {
   background-color: var(--marrom);
