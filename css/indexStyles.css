@@ -2,7 +2,6 @@
 	font-family: Inter, sans-serif;
 	font-feature-settings: 'liga' 1, 'calt' 1;
 	--marrom: #574E45;
-	--bege-dourado: #B5965A;
 	--branco-suave: #F8F4E6;
 	--preto: #000;
 	--cinza-claro: #373737a6;
@@ -88,7 +87,6 @@
 	background-color: #e9d8a6;
 	border-radius: 5px;
 	margin: 0 auto;
-
 }
 
 .pai {
@@ -107,7 +105,7 @@
 	font-size: 25px;
 	font-weight: 600;
 	background-color: var(--branco-suave);
-	color: #574e45;
+	color: var(--marrom);
 	padding: 40px;
 	width: 50%;
 	margin: 0 0 0 100px;
@@ -233,6 +231,51 @@
 
 .btn-eventos:hover {
 	border-color: var(--cinza-claro);
+	cursor: pointer;
+}
+
+.eventos-section .btns{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 50px 0;
+}
+
+.btn-maiseventos {
+	width: 16rem;
+	background-color: var(--marrom-botao);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.5rem;
+	height: 4.5rem;
+	color: var(--preto);
+	transition: border-color 0.3s ease;
+	border: 1px solid transparent;
+	box-sizing: border-box;
+	box-shadow: -3px 3px 1px var(--cinza-claro);
+	user-select: none;
+}
+
+.btn-maiseventos a {
+	color: var(--branco-suave);
+	font-weight: 800;
+	font-size: 25px;
+	text-decoration: none;
+}
+
+.btn-maiseventos .barrinha {
+	width: 55%;
+	height: 5px;
+	background-color: #574e45;
+	border-radius: 5px;
+	margin: 0 auto;
+}
+
+.btn-maiseventos:hover {
+	border-color: #72655b;
 	cursor: pointer;
 }
 
