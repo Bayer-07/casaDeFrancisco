@@ -236,6 +236,34 @@
 	cursor: pointer;
 }
 
+.btns-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn-maiseventos {
+	width: 15rem;
+	background-image: linear-gradient(10deg, #ffff8649, #ffff4d7c 90%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.5rem;
+	height: 2.5rem;
+	color: var(--preto);
+	transition: border-color 0.3s ease;
+	border: 1px solid transparent;
+	box-sizing: border-box;
+	box-shadow: -3px 3px 1px var(--cinza-claro);
+	user-select: none;
+}
+
+.btn-maiseventos:hover {
+	border-color: var(--cinza-claro);
+	cursor: pointer;
+}
+
 
 
 /** Responsividade */
