@@ -6,7 +6,7 @@
   --marrom-botao: #36302B;
   --bege-dourado: #A88B59;
   --branco-suave: #f8f4e6;
-  --bege-campo: #F2E6CF;
+  --bege-campo: #F2E6CFB2;
   --branco: #FFFFFF;
   --preto: #000000;
   --cinza-placeholder: #888;
@@ -26,139 +26,49 @@
   justify-content: center;
 }
 
-
-
-.contact-form-container {
+.card-doacoes {
   background-color: var(--marrom);
   border-radius: 15px;
-  padding: 2.5rem;
+  padding: 3rem;
   width: 90%;
   max-width: 1000px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.contact-form {
-  display: grid;
-  grid-template-columns: 1fr 1.8fr;
-  gap: 2rem;
-  align-items: start;
-}
-
-.form-left,
-.form-right {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 3rem;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.form-group label {
-  color: var(--bege-campo);
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.form-group input,
-.form-group textarea {
-  background-color: var(--bege-campo);
-  border: none;
-  border-radius: 8px;
-  padding: 0.75rem;
-  font-size: 1rem;
-  font-family: Inter, sans-serif;
-  color: var(--marrom);
-  transition: background-color 0.3s;
-  width: 100%;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  background-color: var(--branco);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: var(--cinza-placeholder);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 150px;
-}
-
-.form-left {
-  grid-column: 1;
-}
-
-.form-right {
-  grid-column: 2;
-  grid-row: 1 / 3;
-}
-
-.form-submit {
-  grid-column: 1 / -1;
+.text-wrapper {
+  width: 50%;
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
-.form-submit button {
-  background-color: var(--marrom-botao);
-  color: var(--branco);
-  border: none;
-  border-radius: 8px;
-  padding: 0.75rem 4rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  font-family: Inter, sans-serif;
-  cursor: pointer;
-  transition: all 0.3s;
-  position: relative;
-  display: inline-block;
+.card-mensagem {
+  width: 80%;
+  background-color: #F2E6CFB2;
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+  border-radius: 5px;
+  color: var(--preto);
+  height: fit-content;
 }
 
-.form-submit button span {
-  position: relative;
-  display: inline-block;
+.card-mensagem h3 {
+  text-align: center;
 }
 
-.form-submit button span::after {
-  content: '';
-  position: absolute;
-  bottom: -0.15rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 140%;
-  height: 2px;
-  background-color: var(--marrom);
+.qr-code-wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
-.form-submit button:hover {
-  background-color: var(--branco);
-  color: var(--marrom);
-}
-
-@media screen and (max-width: 1024px) {
-  .contact-form {
-    grid-template-columns: 1fr;
-  }
-
-  .form-right {
-    grid-column: 1;
-  }
-
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .developer {
-    text-align: left;
-  }
+.qr-code-wrapper img {
+  width: 70%;
 }
