@@ -54,7 +54,8 @@
     gap: 1rem;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
+    text-align: justify;
 }
 .texto-card h1 {
     margin-bottom: 20px;
