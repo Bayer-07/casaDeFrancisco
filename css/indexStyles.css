@@ -76,6 +76,7 @@
 
 .titulo h1 {
 	font-size: 50px;
+	font-weight: 800;
 	color: var(--branco-suave);
 	text-align: center;
 	padding: 3rem 1rem 1rem 1rem;
@@ -118,7 +119,6 @@
 .organizacao p {
 	display: inline-block;
 	transform-origin: center;
-	transition: transform 0.2 ease;
 	margin: 20px 0;
 	text-align: justify;
 }
@@ -279,7 +279,60 @@
 	cursor: pointer;
 }
 
+.doutrina {
+	padding: 6rem 0rem 5rem 0rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--branco-suave);
+}
 
+.doutrina .titulo h1{
+	font-size: 50px;
+	font-weight: 800;
+	padding: 0;
+	color: var(--marrom);
+}
+
+.historia {
+	display: flex;
+	justify-content: justify;
+	text-align: left;
+	padding-top: 75px;
+}
+
+.historia-div {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	align-items: center;
+
+	font-size: 25px;
+	font-weight: 600;
+	background-color: #675f55;
+	padding: 5rem;
+	margin: 0 0 0 250px;
+	width: 50%;
+	border-radius: 15px;
+
+	box-sizing: border-box;
+
+	min-width: 75%;
+}
+
+.historia-texto {
+
+}
+
+.historia-texto p {
+	display: inline-block;
+	transform-origin: center;
+	margin: 20px 0;
+	text-align: justify;
+
+	color: var(--branco-suave);
+}
 
 /** Responsividade */
 
