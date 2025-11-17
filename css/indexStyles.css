@@ -234,7 +234,7 @@
 	cursor: pointer;
 }
 
-.eventos-section .btns{
+.eventos-section .btns {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -288,7 +288,7 @@
 	background-color: var(--branco-suave);
 }
 
-.doutrina .titulo h1{
+.doutrina .titulo h1 {
 	font-size: 50px;
 	font-weight: 800;
 	padding: 0;
@@ -328,24 +328,4 @@
 	text-align: justify;
 
 	color: var(--branco-suave);
-}
-
-/** Responsividade */
-
-@media screen and (max-width: 1380px) {
-	.navbar-menu {
-		display: none;
-	}
-}
-
-@media (max-width: 1024px) {
-	.cartao {
-		width: 45%;
-	}
-}
-
-@media (max-width: 700px) {
-	.cartao {
-		width: 90%;
-	}
 }

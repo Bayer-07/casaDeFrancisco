@@ -92,6 +92,93 @@ body {
     color: var(--cinza-claro);
 }
 
+.menu-hamburguer {
+    display: none;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.menu-hamburguer button {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.menu-hamburguer button span {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/** Responsividade */
+
+
+@media screen and (max-width: 1380px) {
+    .navbar-menu {
+        display: none;
+    }
+
+    .menu-hamburguer {
+        display: contents;
+    }
+
+    /* Menu mobile quando ativo */
+    .navbar-menu.active {
+        display: block;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100vw;
+        background-color: var(--branco-suave);
+        box-shadow: 0 4px 10px var(--cinza-claro);
+        z-index: 1000;
+        animation: slideDown 0.3s ease;
+        gap: 0px;
+    }
+
+    .navbar-menu.active ul {
+        flex-direction: column;
+        gap: 0px;
+        margin: 0;
+    }
+
+    .navbar-menu.active li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-menu.active a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(87, 78, 69, 0.1);
+        color: var(--marrom) !important;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cartao {
+        width: 45%;
+    }
+}
+
+@media (max-width: 700px) {
+    .cartao {
+        width: 90%;
+    }
+}
+
 
 
 
