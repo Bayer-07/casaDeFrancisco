@@ -410,7 +410,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 6rem 0rem 5rem 0rem;
+	padding: 3rem 0rem 5rem 0rem;
 
 
 	background-color: #b5965a;
@@ -429,7 +429,21 @@
 }
 
 .map-container {
+	display: flex;
+	flex-direction: column;
     border-radius: 12px;
     overflow: hidden;
     margin-top: 30px;
+}
+
+.contato-container {
+	display:flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.contato {
+	display:flex;
+	align-items: center;
+	gap: 2rem;
 }
