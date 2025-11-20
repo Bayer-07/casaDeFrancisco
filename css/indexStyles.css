@@ -403,3 +403,33 @@
 .doutrina-section .texto p {
 	margin-left: 1rem;
 }
+
+
+.onde-nos-encontrar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 6rem 0rem 5rem 0rem;
+
+
+	background-color: #b5965a;
+}
+
+.onde-nos-encontrar .titulo h1{
+	color: var(--marrom);
+}
+
+.container-local {
+	margin-top: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 200px;
+}
+
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 30px;
+}
