@@ -85,14 +85,6 @@
 	padding: 3rem 1rem 1rem 1rem;
 }
 
-.barrinha {
-	width: 49%;
-	height: 6px;
-	background-color: #e9d8a6;
-	border-radius: 5px;
-	margin: 0 auto;
-}
-
 .pai {
 	display: flex;
 	justify-content: space-between;
