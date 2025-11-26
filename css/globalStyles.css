@@ -589,11 +589,6 @@ body {
     font-weight: 600;
 }
 
-.footer-nav a.active-section {
-    color: var(--bege-dourado) !important;
-    font-weight: 600;
-}
-
 /* Scroll suave global para navegadores que não suportam CSS scroll-behavior */
 html {
     scroll-behavior: smooth;

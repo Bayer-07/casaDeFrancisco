@@ -60,7 +60,6 @@ async function getDados() {
 
         const dadosJSON = await response.json();
         const dados = dadosJSON.result;
-        console.log(dados)
 
         if (!dados || dados.length === 0) {
             console.log("Nenhum dado encontrado.");

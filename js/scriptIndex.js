@@ -19,7 +19,6 @@ async function getDados() {
 
         const dadoNaoFOrmatado = await informacaoEventosPrincipais.json();
         const dado = dadoNaoFOrmatado.result
-        console.log(dado)
 
         const wrapper = document.querySelector("[class = 'eventos']");
 
@@ -87,8 +86,6 @@ async function getOrganizacaoData() {
         const data = await response.json();
         const organizacaoData = data.result[0]; // Pega o primeiro item do array
         
-        console.log('Dados da organização recebidos:', organizacaoData);
-        
         if (organizacaoData) {
             // Atualiza o texto da organização
             const organizacaoTextContainer = document.querySelector('.organizacao');
@@ -144,8 +141,6 @@ async function getHistoriaData() {
         const data = await response.json();
         const historiaData = data.result[0]; // Pega o primeiro item do array
         
-        console.log('Dados da história recebidos:', historiaData);
-        
         if (historiaData) {
             // Atualiza o título da seção se fornecido
             if (historiaData.titulo) {
@@ -195,8 +190,6 @@ async function getHistoriaData() {
                     
                     imagemContainer.src = imageUrl;
                     imagemContainer.alt = "Allan Kardec";
-                    
-                    console.log('Imagem de Allan Kardec carregada da API:', imageUrl);
                 }
             }
         }
@@ -218,8 +211,6 @@ async function getTerceiroTextoData() {
 
         const data = await response.json();
         const terceiroTextoData = data.result[0]; // Pega o primeiro item do array
-        
-        console.log('Dados do terceiro texto recebidos:', terceiroTextoData);
         
         if (terceiroTextoData) {
             // Atualiza o título menor (Oração de São Francisco)
