@@ -135,7 +135,7 @@ async function getOrganizacaoData() {
 async function getHistoriaData() {
     try {
         const response = await fetch(
-            "https://lycs5ydc.api.sanity.io/v2025-11-26/data/query/production?query=*%0A%5B%0A++_type+%3D%3D+%27segundoTexto%27%0A%5D%0A%0A%7B%0A++img%2C%0A++++texto%2C%0A++++titulo%0A%7D&perspective=drafts",
+            "https://lycs5ydc.api.sanity.io/v2025-11-26/data/query/production?query=*%0A%5B%0A++_type+%3D%3D+%27segundoTexto%27%0A%5D%0A%0A%7B%0A++imagem%2C%0A++++texto%2C%0A++++titulo%0A%7D&perspective=drafts",
             {
                 method: "GET",
             }
@@ -180,11 +180,11 @@ async function getHistoriaData() {
             }
 
             // Atualiza a imagem se fornecida pela API (Allan Kardec)
-            if (historiaData.img && historiaData.img.asset && historiaData.img.asset._ref) {
+            if (historiaData.imagem && historiaData.imagem.asset && historiaData.imagem.asset._ref) {
                 const imagemContainer = document.querySelector('.retrato');
                 if (imagemContainer) {
                     // Constrói a URL da imagem do Sanity
-                    const imageRef = historiaData.img.asset._ref;
+                    const imageRef = historiaData.imagem.asset._ref;
                     // Extrai o ID da imagem e as dimensões do reference
                     const parts = imageRef.replace('image-', '').split('-');
                     const imageId = parts[0];
@@ -194,9 +194,9 @@ async function getHistoriaData() {
                     const imageUrl = `https://cdn.sanity.io/images/lycs5ydc/production/${imageId}-${dimensions}.${format}`;
                     
                     imagemContainer.src = imageUrl;
-                    imagemContainer.alt = "Imagem da História";
+                    imagemContainer.alt = "Allan Kardec";
                     
-                    console.log('Imagem da história carregada da API:', imageUrl);
+                    console.log('Imagem de Allan Kardec carregada da API:', imageUrl);
                 }
             }
         }
