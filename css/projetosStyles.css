@@ -247,11 +247,6 @@
         white-space: normal;
         line-height: 1.2;
     }
-    
-    .title-line {
-        width: 100%; /* Reduz largura da linha */
-        margin-left: 0;
-    }
 }
 
 @media (max-width: 480px) {
@@ -265,10 +260,5 @@
         white-space: normal;
         line-height: 1.3;
         word-break: break-word; /* Força quebra se necessário */
-    }
-    
-    .title-line {
-        width: 90%;
-        margin-left: 5%;
     }
 }
