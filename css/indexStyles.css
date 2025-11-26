@@ -18,10 +18,12 @@
 
 
 
+
+
 /** Controle da Main */
 
 .main {
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	padding: 10rem 0rem 5rem 0rem;
 	display: flex;
@@ -93,9 +95,11 @@
 
 .pai {
 	display: flex;
-	justify-content: justify;
+	justify-content: space-between;
+	align-items: center;
 	text-align: left;
-	padding-top: 75px;
+	padding: 75px;
+	gap: 3rem;
 }
 
 .organizacao {
@@ -110,11 +114,28 @@
 	color: var(--marrom);
 	padding: 40px;
 	width: 50%;
-	margin: 0 0 0 100px;
 	border-radius: 15px;
 	box-shadow: -10px 10px #e7ddc4;
-
 	box-sizing: border-box;
+}
+
+.imagem-organizacao {
+	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sao-francisco {
+	width: 100%;
+	max-width: 500px;
+	height: auto;
+	border-radius: 15px;
+	transition: transform 0.3s ease;
+}
+
+.sao-francisco:hover {
+	transform: scale(1.02);
 }
 
 .organizacao p {
@@ -122,6 +143,13 @@
 	transform-origin: center;
 	margin: 20px 0;
 	text-align: justify;
+}
+
+.imagem-organizacao {
+	flex-shrink: 0;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
 }
 
 .eventos-section {
@@ -190,10 +218,17 @@
 	padding: 2rem 0rem 5rem 0rem;
 	display: flex;
 	gap: 2rem;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
 }
 
 .btn-projetos {
 	width: 15rem;
+	max-width: 100%;
 	background-image: linear-gradient(10deg, #ffff8649, #ffff4d7c 90%);
 	display: flex;
 	justify-content: center;
@@ -215,6 +250,7 @@
 
 .btn-eventos {
 	width: 10rem;
+	max-width: 100%;
 	background-color: var(--bege-dourado);
 	display: flex;
 	justify-content: center;
@@ -280,6 +316,8 @@
 	cursor: pointer;
 }
 
+
+
 .doutrina-section {
 	padding: 6rem 0rem 5rem 0rem;
 	display: flex;
@@ -298,7 +336,7 @@
 
 .historia {
 	display: flex;
-	justify-content: justify;
+	justify-content: center;
 	padding-top: 75px;
 }
 
@@ -306,13 +344,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	
+
 	background-color: #675f55;
 	box-sizing: border-box;
 	width: 75%;
 
 	padding: 5rem;
-	margin: 0 0 0 250px;
 	border-radius: 15px;
 }
 
@@ -323,9 +360,10 @@
 	padding: 0 2rem 0 0;
 	text-align: justify;
 
-	font-size: 25px;
+	font-size: 22px;
 	font-weight: 600;
 	color: var(--branco-suave);
+	line-height: 1.6;
 }
 
 .conteudo {
@@ -350,21 +388,21 @@
 
 .doutrina-section .titulo {
 	display: flex;
- 	align-items: center;
- 	gap: 12px;
-  	margin-bottom: 2rem;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 2rem;
 	margin-left: 4rem;
 }
 
 .barra {
-    width: 6px;
-    height: 60px;
-    background: #e9d8a6;
-    border-radius: 5px;
+	width: 6px;
+	height: 60px;
+	background: #e9d8a6;
+	border-radius: 5px;
 }
 
 .conteudo {
-    display: flex;
+	display: flex;
 }
 
 .titulo-texto {
@@ -372,10 +410,10 @@
 }
 
 .bloco {
-    padding: 30px;
-    border-radius: 10px;
-    color: #2b2b2b;
-    line-height: 1.6;
+	padding: 30px;
+	border-radius: 10px;
+	color: #2b2b2b;
+	line-height: 1.6;
 }
 
 .oracao {
@@ -387,21 +425,25 @@
 	margin: 0 0 0 5rem;
 	min-width: 20%;
 	z-index: 2;
+	text-align: center;
+	box-sizing: border-box;
 }
 
 .doutrina-section .texto {
 	margin-right: 3rem;
 	padding: 4rem;
 
-	font-size: 25px;
-  	font-weight: 600;
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 1.6;
 
-    background: #675f55;
+	background: #675f55;
 	color: var(--branco-suave);
 }
 
 .doutrina-section .texto p {
-	margin-left: 1rem;
+	margin: 20px 0;
+	text-align: justify;
 }
 
 
@@ -416,7 +458,7 @@
 	background-color: #b5965a;
 }
 
-.onde-nos-encontrar .titulo h1{
+.onde-nos-encontrar .titulo h1 {
 	color: var(--marrom);
 }
 
@@ -431,19 +473,755 @@
 .map-container {
 	display: flex;
 	flex-direction: column;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-top: 30px;
+	border-radius: 12px;
+	overflow: hidden;
+	margin-top: 30px;
 }
 
 .contato-container {
-	display:flex;
+	display: flex;
 	flex-direction: column;
 	gap: 2rem;
 }
 
 .contato {
-	display:flex;
+	display: flex;
 	align-items: center;
 	gap: 2rem;
+}
+
+/* Seção A Organização Responsiva */
+@media (max-width: 1200px) {
+	.informativo {
+		padding: 60px 2rem 70px 2rem;
+	}
+
+	.titulo h1 {
+		font-size: 45px;
+		padding: 2.5rem 1rem 1rem 1rem;
+	}
+
+	.pai {
+		padding: 60px;
+		gap: 2.5rem !important;
+	}
+
+	.organizacao {
+		width: 55%;
+		padding: 35px;
+		font-size: 22px;
+	}
+
+	.imagem-organizacao {
+		width: 40% !important;
+	}
+
+	.sao-francisco {
+		max-width: 420px !important;
+	}
+}
+
+@media (max-width: 1024px) {
+	.informativo {
+		padding: 50px 1rem 60px 1rem;
+	}
+
+	.titulo h1 {
+		font-size: 40px;
+		padding: 2rem 1rem 1rem 1rem;
+	}
+
+	.pai {
+		flex-direction: column !important;
+		justify-content: center;
+		padding-top: 50px;
+		gap: 2rem !important;
+		align-items: center !important;
+	}
+
+	.organizacao {
+		width: 80%;
+		margin: 0;
+		padding: 30px;
+		font-size: 20px;
+	}
+
+	.imagem-organizacao {
+		width: 60% !important;
+		order: 1 !important;
+	}
+
+	.sao-francisco {
+		max-width: 380px !important;
+	}
+
+	.barrinha {
+		width: 60%;
+	}
+}
+
+@media (max-width: 768px) {
+	.informativo {
+		padding: 40px 1rem 50px 1rem;
+	}
+
+	.titulo h1 {
+		font-size: 28px;
+		padding: 1.5rem 1rem 1rem 1rem;
+	}
+
+	.pai {
+		padding: 40px;
+		flex-direction: column !important;
+		align-items: center !important;
+		gap: 2rem !important;
+	}
+
+	.imagem-organizacao {
+		order: 1 !important;
+		width: 100% !important;
+		max-width: 200px !important;
+		margin: 0 auto 1.5rem !important;
+	}
+
+	.organizacao-conteudo {
+		order: 2 !important;
+		width: 100% !important;
+		text-align: center !important;
+	}
+
+	.organizacao {
+		width: 95%;
+		padding: 25px 20px;
+		font-size: 18px;
+		border-radius: 12px;
+	}
+
+	.conteudo-organizacao {
+		flex-direction: column !important;
+		align-items: center !important;
+		gap: 1.5rem !important;
+	}
+
+	.sao-francisco {
+		width: 100% !important;
+		max-width: 320px !important;
+	}
+
+	.organizacao p {
+		margin: 15px 0;
+	}
+
+	.barrinha {
+		width: 70%;
+	}
+}
+
+@media (max-width: 480px) {
+	.informativo {
+		padding: 30px 0.5rem 40px 0.5rem;
+	}
+
+	.titulo h1 {
+		font-size: 22px;
+		padding: 1rem 0.5rem 1rem 0.5rem;
+	}
+
+	.pai {
+		padding: 30px;
+		gap: 1.5rem !important;
+	}
+
+	.imagem-organizacao {
+		max-width: 150px !important;
+		margin: 0 auto 1rem !important;
+	}
+
+	.organizacao {
+		width: 100%;
+		margin: 0;
+		padding: 20px 15px;
+		font-size: 16px;
+		border-radius: 10px;
+	}
+
+	.conteudo-organizacao {
+		gap: 1rem !important;
+	}
+
+	.sao-francisco {
+		width: 100% !important;
+		max-width: 250px !important;
+	}
+
+	.organizacao p {
+		margin: 12px 0;
+		text-align: left;
+	}
+
+	.barrinha {
+		width: 80%;
+	}
+}
+
+/* Seção A Doutrina Espírita Responsiva */
+@media (max-width: 1200px) {
+	.doutrina-section {
+		padding: 5rem 2rem 4rem 2rem;
+	}
+
+	.historia-div {
+		width: 85%;
+		padding: 4rem 3rem;
+	}
+
+	.retrato {
+		width: 400px;
+	}
+
+	.conteudo {
+		gap: 30px;
+	}
+
+	.doutrina-section .titulo {
+		margin-left: 2rem;
+	}
+
+	.oracao {
+		margin: 0 2rem 0 3rem;
+		min-width: 25%;
+		max-width: calc(100% - 5rem);
+		box-sizing: border-box;
+	}
+
+	.doutrina-section .texto {
+		margin-right: 2rem;
+		padding: 3rem;
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.doutrina-section {
+		padding: 4rem 1rem 3rem 1rem;
+	}
+
+	.doutrina-section .titulo h1 {
+		font-size: 40px;
+	}
+
+	.historia-div {
+		width: 95%;
+		padding: 3rem 2rem;
+	}
+
+	.historia-texto p {
+		font-size: 20px;
+		padding: 0 1rem 0 0;
+	}
+
+	.conteudo {
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	.retrato {
+		width: 350px;
+		order: 1;
+	}
+
+	.titulo-texto {
+		margin-left: 0;
+		width: 100%;
+		order: 2;
+	}
+
+	.doutrina-section .titulo {
+		margin-left: 0;
+		justify-content: center;
+	}
+
+	.oracao {
+		margin: 0 1rem;
+		min-width: 80%;
+		width: calc(100% - 2rem);
+		max-width: calc(100% - 2rem);
+		order: 3;
+		box-sizing: border-box;
+	}
+
+	.doutrina-section .texto {
+		margin-right: 0;
+		padding: 2.5rem;
+		font-size: 20px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+@media (max-width: 768px) {
+	.doutrina-section {
+		padding: 3rem 1rem 2rem 1rem;
+	}
+
+	.doutrina-section .titulo h1 {
+		font-size: 28px;
+	}
+
+	.historia {
+		padding-top: 40px;
+	}
+
+	.historia-div {
+		width: 100%;
+		padding: 2rem 1.5rem;
+	}
+
+	.historia-texto p {
+		font-size: 18px;
+		margin: 15px 0;
+		padding: 0;
+	}
+
+	.container {
+		margin-top: 3rem;
+	}
+
+	.retrato {
+		width: 280px;
+		order: 1;
+	}
+
+	.titulo-texto {
+		order: 2;
+	}
+
+	.oracao {
+		padding: 20px;
+		margin: 0 1rem;
+		min-width: calc(100% - 2rem);
+		width: calc(100% - 2rem);
+		max-width: calc(100% - 2rem);
+		order: 3;
+		box-sizing: border-box;
+	}
+
+	.oracao h2 {
+		font-size: 18px;
+	}
+
+	.oracao p {
+		font-size: 14px;
+	}
+
+	.doutrina-section .texto {
+		padding: 2rem 1.5rem;
+		font-size: 18px;
+	}
+
+	.barra {
+		height: 40px;
+		width: 4px;
+	}
+}
+
+@media (max-width: 480px) {
+	.doutrina-section {
+		padding: 2rem 0.5rem 1.5rem 0.5rem;
+	}
+
+	.doutrina-section .titulo h1 {
+		font-size: 22px;
+		text-align: center;
+	}
+
+	.historia {
+		padding-top: 30px;
+	}
+
+	.historia-div {
+		padding: 1.5rem 1rem;
+		border-radius: 10px;
+	}
+
+	.historia-texto p {
+		font-size: 16px;
+		margin: 12px 0;
+	}
+
+	.container {
+		margin-top: 2rem;
+		gap: 20px;
+	}
+
+	.retrato {
+		width: 220px;
+		order: 1;
+	}
+
+	.titulo-texto {
+		order: 2;
+	}
+
+	.doutrina-section .titulo {
+		margin-bottom: 1rem;
+	}
+
+	.oracao {
+		padding: 15px;
+		margin: 0 0.5rem;
+		width: calc(100% - 1rem);
+		max-width: calc(100% - 1rem);
+		order: 3;
+		box-sizing: border-box;
+	}
+
+	.oracao h2 {
+		font-size: 16px;
+	}
+
+	.oracao p {
+		font-size: 12px;
+		line-height: 1.4;
+	}
+
+	.doutrina-section .texto {
+		padding: 1.5rem 1rem;
+		font-size: 16px;
+	}
+
+	.doutrina-section .texto p {
+		margin-left: 0;
+	}
+
+	.barra {
+		height: 35px;
+		width: 3px;
+	}
+}
+
+/* Seção de Localização Responsiva */
+@media (max-width: 1200px) {
+	.container-local {
+		gap: 100px;
+		padding: 0 2rem;
+	}
+
+	.map-container iframe {
+		width: 700px;
+		height: 400px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.onde-nos-encontrar {
+		padding: 2.5rem 1rem 4rem 1rem;
+	}
+
+	.container-local {
+		flex-direction: column;
+		gap: 3rem;
+		align-items: center;
+		margin-top: 2rem;
+	}
+
+	.map-container {
+		width: 100%;
+		max-width: 600px;
+	}
+
+	.map-container iframe {
+		width: 100%;
+		height: 350px;
+	}
+
+	.contato-container {
+		align-items: center;
+		text-align: center;
+	}
+}
+
+@media (max-width: 768px) {
+	.onde-nos-encontrar {
+		padding: 2rem 1rem 3rem 1rem;
+	}
+
+	.onde-nos-encontrar .titulo h1 {
+		font-size: 1.8rem;
+	}
+
+	.container-local {
+		gap: 2rem;
+		margin-top: 1.5rem;
+	}
+
+	.map-container iframe {
+		height: 300px;
+	}
+
+	.contato {
+		gap: 1.5rem;
+	}
+
+	.contato h2 {
+		font-size: 1rem;
+	}
+
+	.social-icon {
+		width: 35px !important;
+		height: 35px !important;
+	}
+}
+
+@media (max-width: 480px) {
+	.onde-nos-encontrar {
+		padding: 1.5rem 0.5rem 2.5rem 0.5rem;
+	}
+
+	.onde-nos-encontrar .titulo h1 {
+		font-size: 1.4rem;
+	}
+
+	.container-local {
+		gap: 1.5rem;
+		padding: 0 0.5rem;
+	}
+
+	.map-container {
+		max-width: 100%;
+	}
+
+	.map-container iframe {
+		height: 250px;
+	}
+
+	.contato-container {
+		gap: 1.5rem;
+	}
+
+	.contato {
+		gap: 1rem;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.contato h2 {
+		font-size: 0.9rem;
+	}
+
+	.social-icon {
+		width: 30px !important;
+		height: 30px !important;
+	}
+}
+
+/* ============================================
+   RESPONSIVIDADE - SEÇÃO HERO (MAIN)
+   ========================================== */
+
+/* Desktop Large (1200px+) - padrão já definido */
+
+/* Desktop Medium (até 1200px) */
+@media (max-width: 1200px) {
+	.main {
+		padding: 8rem 2rem 4rem 2rem !important;
+	}
+
+	.logo-principal {
+		height: 13rem !important;
+		width: 13rem !important;
+	}
+
+	.inicio p {
+		width: 65% !important;
+		font-size: 1rem !important;
+	}
+}
+
+/* Tablet (até 1024px) */
+@media (max-width: 1024px) {
+	.main {
+		padding: 7rem 2rem 3rem 2rem !important;
+		min-height: 90vh !important;
+	}
+
+	.logo-principal {
+		height: 12rem !important;
+		width: 12rem !important;
+	}
+
+	.inicio {
+		gap: 1.8rem !important;
+	}
+
+	.inicio p {
+		width: 75% !important;
+		font-size: 0.95rem !important;
+	}
+
+	.primeiro {
+		font-size: 1.8rem !important;
+	}
+
+	.segundo {
+		font-size: 1.5rem !important;
+	}
+
+	.btns {
+		flex-direction: column !important;
+		gap: 1.2rem !important;
+		align-items: center !important;
+		padding: 1rem 0rem 2rem 0rem !important;
+	}
+
+	.btn-projetos, .btn-eventos {
+		width: 300px !important;
+		max-width: 90% !important;
+		text-align: center !important;
+		box-sizing: border-box !important;
+	}
+}
+
+/* Mobile Large (até 768px) */
+@media (max-width: 768px) {
+	.main {
+		padding: 6rem 1.5rem 3rem 1.5rem !important;
+		min-height: 85vh !important;
+	}
+
+	.logo-principal {
+		height: 10rem !important;
+		width: 10rem !important;
+	}
+
+	.inicio {
+		gap: 1.5rem !important;
+	}
+
+	.inicio p {
+		width: 85% !important;
+		font-size: 0.9rem !important;
+		line-height: 1.3rem !important;
+	}
+
+	.primeiro {
+		font-size: 1.6rem !important;
+	}
+
+	.segundo {
+		font-size: 1.3rem !important;
+	}
+
+	.btns {
+		flex-direction: column !important;
+		gap: 1rem !important;
+		width: 100% !important;
+		align-items: center !important;
+		padding: 1rem 0rem 2rem 0rem !important;
+	}
+
+	.btn-projetos, .btn-eventos {
+		font-size: 0.9rem !important;
+		width: 90% !important;
+		max-width: 280px !important;
+		text-align: center !important;
+		box-sizing: border-box !important;
+	}
+}
+
+/* Mobile Medium (até 480px) */
+@media (max-width: 480px) {
+	.main {
+		padding: 5rem 1rem 2rem 1rem !important;
+		min-height: 80vh !important;
+	}
+
+	.logo-principal {
+		height: 8rem !important;
+		width: 8rem !important;
+	}
+
+	.inicio {
+		gap: 1.2rem !important;
+	}
+
+	.inicio p {
+		width: 90% !important;
+		font-size: 0.85rem !important;
+		line-height: 1.25rem !important;
+	}
+
+	.primeiro {
+		font-size: 1.4rem !important;
+	}
+
+	.segundo {
+		font-size: 1.2rem !important;
+	}
+
+	.btns {
+		width: 100% !important;
+		padding: 1rem !important;
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	.btn-projetos, .btn-eventos {
+		font-size: 0.85rem !important;
+		width: 100% !important;
+		max-width: none !important;
+		box-sizing: border-box !important;
+	}
+}
+
+/* Mobile Small (até 360px) */
+@media (max-width: 360px) {
+	.main {
+		padding: 4rem 0.8rem 2rem 0.8rem !important;
+		min-height: 75vh !important;
+	}
+
+	.logo-principal {
+		height: 7rem !important;
+		width: 7rem !important;
+	}
+
+	.inicio {
+		gap: 1rem !important;
+	}
+
+	.inicio p {
+		width: 95% !important;
+		font-size: 0.8rem !important;
+		line-height: 1.2rem !important;
+	}
+
+	.primeiro {
+		font-size: 1.3rem !important;
+	}
+
+	.segundo {
+		font-size: 1.1rem !important;
+	}
+
+	.btns {
+		width: 100% !important;
+		padding: 0.5rem !important;
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	.btn-projetos, .btn-eventos {
+		font-size: 0.8rem !important;
+		width: 100% !important;
+		max-width: none !important;
+		box-sizing: border-box !important;
+	}
+
+	.sao-francisco {
+		max-width: 480px !important;
+	}
 }

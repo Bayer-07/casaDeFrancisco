@@ -72,8 +72,9 @@
   font-size: 1rem;
   font-family: Inter, sans-serif;
   color: var(--marrom);
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -118,9 +119,10 @@
   font-weight: 600;
   font-family: Inter, sans-serif;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
   position: relative;
   display: inline-block;
+  box-sizing: border-box;
 }
 
 .form-submit button span {
@@ -144,21 +146,221 @@
   color: var(--marrom);
 }
 
-@media screen and (max-width: 1024px) {
+/* Responsividade da Página de Contato */
+@media (max-width: 1200px) {
+  .main-content {
+    padding: 10rem 1rem 3rem 1rem;
+    /* Mantém 10rem na parte superior */
+  }
+
+  .contact-form-container {
+    width: 95%;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 10rem 1rem 2rem 1rem;
+    /* Mantém 10rem na parte superior */
+  }
+
   .contact-form {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .form-right {
     grid-column: 1;
+    grid-row: auto;
   }
 
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .contact-form-container {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10rem 1rem 2rem 1rem;
+    /* Mantém 10rem na parte superior */
   }
 
-  .developer {
-    text-align: left;
+  .contact-form-container {
+    width: 100%;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+
+  .contact-form {
+    gap: 1.5rem;
+  }
+
+  .form-left,
+  .form-right {
+    gap: 1.2rem;
+  }
+
+  .form-group {
+    gap: 0.6rem;
+  }
+
+  .form-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+    border-radius: 6px;
+  }
+
+  .form-group textarea {
+    min-height: 140px;
+  }
+
+  .form-submit {
+    margin-top: 1.5rem;
+  }
+
+  .form-submit button {
+    padding: 0.8rem 3.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 10rem 0.75rem 1.5rem 0.75rem;
+    /* Mantém 10rem na parte superior */
+  }
+
+  .contact-form-container {
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-form {
+    gap: 1.2rem;
+  }
+
+  .form-left,
+  .form-right {
+    gap: 1rem;
+  }
+
+  .form-group {
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  .form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+  }
+
+  .form-submit {
+    margin-top: 1rem;
+  }
+
+  .form-submit button {
+    padding: 0.8rem 3rem;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    min-width: 140px;
+  }
+}
+
+/* Ajustes do Título da Página */
+@media (max-width: 1024px) {
+  .page-title h1 {
+    font-size: 2.2rem !important;
+    white-space: normal;
+    /* Permite quebra de linha */
+  }
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    /* Adiciona padding lateral */
+  }
+
+  .page-title h1 {
+    font-size: 1.8rem !important;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  .title-line {
+    width: 100%;
+    /* Reduz largura da linha */
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .page-title h1 {
+    font-size: 1.4rem !important;
+    white-space: normal;
+    line-height: 1.3;
+    word-break: break-word;
+    /* Força quebra se necessário */
+  }
+
+  .title-line {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 360px) {
+  .main-content {
+    padding: 10rem 0.5rem 1.5rem 0.5rem;
+  }
+
+  .contact-form-container {
+    padding: 1rem 0.75rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .form-submit button {
+    padding: 0.7rem 2.5rem;
+    font-size: 0.9rem;
+    min-width: 120px;
+  }
+
+  .page-title h1 {
+    font-size: 1rem;
   }
 }

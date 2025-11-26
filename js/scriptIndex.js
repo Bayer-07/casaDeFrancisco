@@ -1,9 +1,11 @@
 function navegarProjetos() {
-    console.log("Apertou o botão 'Nossos Projetos'")
+    // Redireciona para a página de projetos
+    window.location.href = 'pages/projetosEEventos.html';
 }
 
 function navegarEventos() {
-    console.log("Apertou o botão 'Eventos'")
+    // Faz scroll suave até a seção de eventos na mesma página
+    smoothScrollTo('eventos', 20);
 }
 
 async function getDados() {
@@ -72,4 +74,198 @@ async function getDados() {
         console.error(err.message);
     }
 }
+
+async function getOrganizacaoData() {
+    try {
+        const response = await fetch(
+            "https://lycs5ydc.api.sanity.io/v2025-11-26/data/query/production?query=*%0A%5B%0A++_type+%3D%3D+%27primeiroTexto%27%0A%5D%0A%0A%7B%0A++img%2C%0A++++texto%0A%7D&perspective=drafts",
+            {
+                method: "GET",
+            }
+        );
+
+        const data = await response.json();
+        const organizacaoData = data.result[0]; // Pega o primeiro item do array
+        
+        console.log('Dados da organização recebidos:', organizacaoData);
+        
+        if (organizacaoData) {
+            // Atualiza o texto da organização
+            const organizacaoTextContainer = document.querySelector('.organizacao');
+            if (organizacaoTextContainer) {
+                // Converte <br> do texto em quebras de linha reais e divide em parágrafos
+                const textoFormatado = organizacaoData.texto.replace(/\<br\>/g, '\n');
+                const paragrafos = textoFormatado.split('\n\n').filter(p => p.trim() !== '');
+                
+                // Limpa o conteúdo atual e adiciona os novos parágrafos
+                organizacaoTextContainer.innerHTML = '';
+                paragrafos.forEach(paragrafo => {
+                    const p = document.createElement('p');
+                    p.textContent = paragrafo.trim();
+                    organizacaoTextContainer.appendChild(p);
+                });
+            }
+
+            // Atualiza a imagem se fornecida pela API
+            if (organizacaoData.img && organizacaoData.img.asset && organizacaoData.img.asset._ref) {
+                const imagemContainer = document.querySelector('.sao-francisco');
+                if (imagemContainer) {
+                    // Constrói a URL da imagem do Sanity
+                    const imageRef = organizacaoData.img.asset._ref;
+                    // Extrai o ID da imagem e as dimensões do reference
+                    const parts = imageRef.replace('image-', '').split('-');
+                    const imageId = parts[0];
+                    const dimensions = parts[1]; // ex: "1233x876"
+                    const format = parts[2]; // ex: "png"
+                    
+                    const imageUrl = `https://cdn.sanity.io/images/lycs5ydc/production/${imageId}-${dimensions}.${format}`;
+                    
+                    imagemContainer.src = imageUrl;
+                    imagemContainer.alt = "Imagem da Organização";
+                }
+            }
+        }
+
+    } catch (error) {
+        console.error('Erro ao carregar dados da organização:', error);
+        // Mantém o conteúdo estático em caso de erro
+    }
+}
+
+async function getHistoriaData() {
+    try {
+        const response = await fetch(
+            "https://lycs5ydc.api.sanity.io/v2025-11-26/data/query/production?query=*%0A%5B%0A++_type+%3D%3D+%27segundoTexto%27%0A%5D%0A%0A%7B%0A++img%2C%0A++++texto%2C%0A++++titulo%0A%7D&perspective=drafts",
+            {
+                method: "GET",
+            }
+        );
+
+        const data = await response.json();
+        const historiaData = data.result[0]; // Pega o primeiro item do array
+        
+        console.log('Dados da história recebidos:', historiaData);
+        
+        if (historiaData) {
+            // Atualiza o título da seção se fornecido
+            if (historiaData.titulo) {
+                let tituloContainer = document.querySelector('.doutrina-section .titulo h1');
+                if (!tituloContainer) {
+                    // Se o h1 não existe, cria um novo
+                    const tituloDiv = document.querySelector('.doutrina-section .titulo');
+                    if (tituloDiv) {
+                        tituloContainer = document.createElement('h1');
+                        tituloDiv.appendChild(tituloContainer);
+                    }
+                }
+                if (tituloContainer) {
+                    tituloContainer.textContent = historiaData.titulo;
+                }
+            }
+
+            // Atualiza o texto da história
+            const historiaTextContainer = document.querySelector('.historia-texto');
+            if (historiaTextContainer && historiaData.texto) {
+                // Converte <br> do texto em quebras de linha reais e divide em parágrafos
+                const textoFormatado = historiaData.texto.replace(/\<br\>/g, '\n');
+                const paragrafos = textoFormatado.split('\n\n').filter(p => p.trim() !== '');
+                
+                // Limpa o conteúdo atual e adiciona os novos parágrafos
+                historiaTextContainer.innerHTML = '';
+                paragrafos.forEach(paragrafo => {
+                    const p = document.createElement('p');
+                    p.textContent = paragrafo.trim();
+                    historiaTextContainer.appendChild(p);
+                });
+            }
+
+            // Atualiza a imagem se fornecida pela API (Allan Kardec)
+            if (historiaData.img && historiaData.img.asset && historiaData.img.asset._ref) {
+                const imagemContainer = document.querySelector('.retrato');
+                if (imagemContainer) {
+                    // Constrói a URL da imagem do Sanity
+                    const imageRef = historiaData.img.asset._ref;
+                    // Extrai o ID da imagem e as dimensões do reference
+                    const parts = imageRef.replace('image-', '').split('-');
+                    const imageId = parts[0];
+                    const dimensions = parts[1]; // ex: "1233x876"
+                    const format = parts[2]; // ex: "png"
+                    
+                    const imageUrl = `https://cdn.sanity.io/images/lycs5ydc/production/${imageId}-${dimensions}.${format}`;
+                    
+                    imagemContainer.src = imageUrl;
+                    imagemContainer.alt = "Imagem da História";
+                    
+                    console.log('Imagem da história carregada da API:', imageUrl);
+                }
+            }
+        }
+
+    } catch (error) {
+        console.error('Erro ao carregar dados da história:', error);
+        // Mantém o conteúdo estático em caso de erro
+    }
+}
+
+async function getTerceiroTextoData() {
+    try {
+        const response = await fetch(
+            "https://lycs5ydc.api.sanity.io/v2025-11-26/data/query/production?query=*%0A%5B%0A++_type+%3D%3D+%27terceiroTexto%27%0A%5D%0A%0A%7B%0A++textMenor%2C%0A++++tituloMenor%2C%0A++++tituloMaior%2C%0A++++textoMaior%0A%7D&perspective=drafts",
+            {
+                method: "GET",
+            }
+        );
+
+        const data = await response.json();
+        const terceiroTextoData = data.result[0]; // Pega o primeiro item do array
+        
+        console.log('Dados do terceiro texto recebidos:', terceiroTextoData);
+        
+        if (terceiroTextoData) {
+            // Atualiza o título menor (Oração de São Francisco)
+            if (terceiroTextoData.tituloMenor) {
+                const tituloMenorContainer = document.querySelector('.bloco.oracao h2');
+                if (tituloMenorContainer) {
+                    tituloMenorContainer.textContent = terceiroTextoData.tituloMenor;
+                }
+            }
+
+            // Atualiza o texto menor (Oração)
+            if (terceiroTextoData.textMenor) {
+                const textoMenorContainer = document.querySelector('.bloco.oracao p');
+                if (textoMenorContainer) {
+                    // Converte <br> em quebras de linha HTML reais
+                    const textoFormatado = terceiroTextoData.textMenor.replace(/\<br\>/g, '<br>');
+                    textoMenorContainer.innerHTML = textoFormatado;
+                }
+            }
+
+            // Atualiza o título maior (São Francisco de Assis)
+            if (terceiroTextoData.tituloMaior) {
+                const tituloMaiorContainer = document.querySelector('.titulo-texto .titulo h1');
+                if (tituloMaiorContainer) {
+                    tituloMaiorContainer.textContent = terceiroTextoData.tituloMaior;
+                }
+            }
+
+            // Atualiza o texto maior (Sobre São Francisco)
+            if (terceiroTextoData.textoMaior) {
+                const textoMaiorContainer = document.querySelector('.bloco.texto p');
+                if (textoMaiorContainer) {
+                    // Converte <br> do texto em quebras de linha HTML reais
+                    const textoFormatado = terceiroTextoData.textoMaior.replace(/\<br\>/g, '<br>');
+                    textoMaiorContainer.innerHTML = textoFormatado;
+                }
+            }
+        }
+
+    } catch (error) {
+        console.error('Erro ao carregar dados do terceiro texto:', error);
+        // Mantém o conteúdo estático em caso de erro
+    }
+}
+
 getDados()
+getOrganizacaoData()
+getHistoriaData()
+getTerceiroTextoData()
